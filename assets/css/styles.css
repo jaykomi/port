@@ -226,30 +226,9 @@ nav ul li {
 }
 
 .socials {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  right: 3.5%;
-  bottom: 45%;
 
+  margin-top: 10px;
 }
-
-/* linked in
-
-.arrow{
-  position: fixed;
-  align-self: center;
-  border-left:2px solid #4756df;
-  margin-top: 2.5%;
-  height:275px;
-  
-}
-
-.fa-linkedin{
-  color:#4756df
-}
-
-*/
 
 .divider {
   font-family: 'Nunito', sans-serif;
@@ -349,11 +328,6 @@ nav ul li {
 }
 
 
-.text-center {
-  text-align: center;
-  font-family: 'Nunito', sans-serif;
-}
-
 header {
   position: relative;
   margin: 500px 0 25px 0;
@@ -365,12 +339,12 @@ header {
 #form {
   position: relative;
   width: 500px;
-  margin: 50px auto 100px auto;
+  margin: 50px auto 35px auto;
 }
 
 input {
   font-family: 'Nunito', sans-serif;
-  font-size:  0.95em;
+  font-size: 0.95em;
   width: 500px;
   height: 50px;
   padding: 0px 15px 0px 15px;
@@ -426,4 +400,22 @@ textarea:hover {
 
 #submit:hover {
   color: #ffffff;
+}
+
+.text-center {
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  margin: 100px auto 15px auto;
+}
+
+.fa-linkedin-in {
+  color: #0072b1;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.fa-linkedin-in:hover {
+  color: #00466b;
+  transition: all 1.5s ease-in-out;
 }
