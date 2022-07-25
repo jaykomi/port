@@ -10,12 +10,10 @@
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="stylesheet" href="assets/css/lightbox.min.css" />
 
-  <!-- social icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
   <!-- JS scripts -->
   <script type="text/javascript" src="assets/js/app.js"></script>
-  <script src="assets/js/lightbox-plus-jquery.min.js"></script>
+
 
   <!-- annotation script -->
 
@@ -39,7 +37,14 @@
 
   </script>
 
+  <script type='text/javascript'>
+    //<![CDATA[ 
+    function loadCSS(e, t, n) { "use strict"; var i = window.document.createElement("link"); var o = t || window.document.getElementsByTagName("script")[0]; i.rel = "stylesheet"; i.href = e; i.media = "only x"; o.parentNode.insertBefore(i, o); setTimeout(function () { i.media = n || "all" }) } loadCSS("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
+  //]]>
+  </Script>
+
 </head>
+
 
 <body>
   <!-- Navbar -->
@@ -63,6 +68,7 @@
       </ul>
     </div>
     <div class="socials">
+      <img src="linkedin-brands.svg" alt="">
       <a href="https://www.linkedin.com/in/jeremy-doeve" target="_blank" class="fa-brands fa-linkedin fa-2x"></a>
     </div>
     </div>
@@ -106,7 +112,7 @@
     <!-- More about -->
 
     <section class="about" id="about">
-     <div class="about-container" id="about-container">
+      <div class="about-container" id="about-container">
         <div class="aboutSecond-container about-card">
           <a href="#" class="fa-brands fa-connectdevelop fa-3x"></a>
           <h2 class="about-title">Junior developer</h2>
@@ -192,7 +198,7 @@
         <br>
         <br>
         <h3 class="project-platform"> &#x2022; Mobile Android application </h3>
-    </div>
+      </div>
     </section>
 
     <div class="divider"><span></span><span>
@@ -222,30 +228,30 @@
         <a href="assets/images/scannerin-min.png" data-lightbox="LetsPlayGallery"
           data-title="Let's Play RFID Scanner Inside"></a>
       </div>
-          <h1 class="project-title">Let's Play!</h1>
-          <div class="project-details">
-            Let's Play has by far been my favourite project up until now.
-            The main goal of the application was to develop software in combination with hardware, that would allow
-            children who suffer from mental disabilities to come in contact with games that required them to be
-            physically
-            active.
-            <br>
-            <br>
-            The application made use of RFID tags to identify and register health workers as well as children allowing
-            them to collect game data and connect it to a person.
-            <br>
-            <br>
-            The game consisted of a quiz in which the button on individual Arduino's would match either a right or wrong
-            answer. Through the use of RF-24 modules, the buttons could be placed up to a 100 meters apart creating the
-            incetive to move.
-            <br>
-            <br>
-            Click on one of the images to the right to view the entire application gallery.
-            <br>
-            <br>
-          <br>
-          <h3 class="project-platform"> &#x2022; Windows desktop application </h3>
-        </div>
+      <h1 class="project-title">Let's Play!</h1>
+      <div class="project-details">
+        Let's Play has by far been my favourite project up until now.
+        The main goal of the application was to develop software in combination with hardware, that would allow
+        children who suffer from mental disabilities to come in contact with games that required them to be
+        physically
+        active.
+        <br>
+        <br>
+        The application made use of RFID tags to identify and register health workers as well as children allowing
+        them to collect game data and connect it to a person.
+        <br>
+        <br>
+        The game consisted of a quiz in which the button on individual Arduino's would match either a right or wrong
+        answer. Through the use of RF-24 modules, the buttons could be placed up to a 100 meters apart creating the
+        incetive to move.
+        <br>
+        <br>
+        Click on one of the images to the right to view the entire application gallery.
+        <br>
+        <br>
+        <br>
+        <h3 class="project-platform"> &#x2022; Windows desktop application </h3>
+      </div>
     </section>
     <!-- Contact section -->
 
@@ -279,6 +285,7 @@
       <p class="text-center">Copyright &copy; Jeremy D.</p>
     </footer>
 
+    <script src="assets/js/lightbox-plus-jquery.min.js"></script>
 
 </body>
 
