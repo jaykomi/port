@@ -339,7 +339,7 @@ nav h1 {
   font-size: 72px;
   font-weight: 800;
   margin-left: 16.5rem;
-  margin-top: 1em;
+ 
 }
 
 .project-details {
@@ -361,13 +361,12 @@ nav h1 {
 }
 
 .second-project {
-  float: right;
+
   max-width: 45%;  
   max-height: 45%;
 }
 
 .second-project-second {
-  float: right;
   max-width: 45%;  
   max-height: 45%;
 
@@ -379,7 +378,7 @@ nav h1 {
 
   .projects h1 {
     font-size: 72px;
-    margin-left: 10rem;
+    margin-left: 2em;
     
   }
 
@@ -408,13 +407,16 @@ nav h1 {
   }
 
   .second-project {
-    max-width: 65%;
+    max-width: 100%;
+    margin-top: -20%;
+    margin-left: 8%;
   }
 
   .second-project-second {
-    max-width: 65%;
-    margin-right: 35%;
-    margin-top: -10%;
+    max-width: 100%;
+    margin-top: -20%;
+    margin-bottom: -10%;
+    margin-right: 5%;
 
   }
 }
@@ -505,18 +507,18 @@ textarea:hover {
   }
 
   #submit{
-    width: 400px;
+    width: 440px;
   }
 
   #message{
-    width: 400px;
+    width: 440px;
   }
 
   #name{
-    width: 400px;
+    width: 440px;
   }
   #email{
-    width: 400px;
+    width: 440px;
   }
 }
 
