@@ -43,30 +43,50 @@
 
 <body>
   <!-- Navbar -->
-  <nav>
+  <nav class="nav">
     <div>
       <h1>Jeremy Doeve</h1>
       <p>Junior developer</p>
     </div>
-    <ul class="navigation">
-      <li><a href="#intro-text" class="nav-link">About</a></li>
-      <li><a href="#skills" class="nav-link">Skills</a></li>
-      <li><a href="#projects" class="nav-link">Projects</a></li>
-      <li><a href="#form" class="nav-link">Contact</a></li>
-    </ul>
+    <a href="#" class="toggle-button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+
+    </a>
+    <div class="navbar-links">
+      <ul>
+        <li><a href="#intro-text" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#form" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
     <div class="socials">
       <a href="https://www.linkedin.com/in/jeremy-doeve" target="_blank" class="fa-brands fa-linkedin fa-2x"></a>
-      </div>
+    </div>
     </div>
   </nav>
+
+  <script type="text/javascript">
+    window.addEventListener('load', () => {
+      const toggle = document.getElementsByClassName('toggle-button')[0]
+      const navLink = document.getElementsByClassName('navbar-links')[0]
+
+      toggle.addEventListener('click', () => {
+        navLink.classList.toggle('active')
+      })
+    })
+  </script>
   <!-- Hero Section -->
 
 
 
-  <section class="hero" id="about">
+  <section class="hero">
     <div class="talents">
       <p id=skillThinking>Motivated.</p>
       <p id=skillSolving>Problem Solver.</p>
+
       <div class="typing-container">
         <span id="skillCurious" class="sentence"></span>
         <span id="feature-text"></span>
@@ -74,193 +94,191 @@
       </div>
     </div>
 
-  <script type="text/javascript">
-    $(document).ready(async function () {
-      await waitForMs(2000);
-      await typeSentence("Permanently Exploring.", "#skillCurious");
-      await waitForMs(1000);
-      await carousel(carouselText, "#skillCurious");
-    });
-  </script>
+    <script type="text/javascript">
+      $(document).ready(async function () {
+        await waitForMs(2000);
+        await typeSentence("Permanently Exploring.", "#skillCurious");
+        await waitForMs(1000);
+        await carousel(carouselText, "#skillCurious");
+      });
+    </script>
 
-  <!-- More about -->
+    <!-- More about -->
 
-  <section class="about" id="about">
-    <div class="about-container">
-      <div class="aboutSecond-container about-card">
-        <a href="#" class="fa-brands fa-connectdevelop fa-3x"></a>
-        <h2 class="about-title">Junior developer</h2>
-        <p class="about-details">
-          I love building projects from the ground up and bring ideas to life through software.
-        </p>
-        <h3 class="about-languages">Languages I've come in contact with.</h3>
-        <p class="about-details">
-          Java, HTML, CSS, C++.
-        </p>
-        <h3 class="about-languages">Platforms I've worked on.</h3>
-        <p class="about-details">
-          Windows, Android, Web.
-        </p>
-        <h3 class="about-languages">Current position.</h3>
-        <p class="about-details">
-          Currently I am looking for an internship.
-          Believe we might be the right match?
-          Scroll below & get in touch!
-        </p>
+    <section class="about" id="about">
+      <div class="about-container">
+        <div class="aboutSecond-container about-card">
+          <a href="#" class="fa-brands fa-connectdevelop fa-3x"></a>
+          <h2 class="about-title">Junior developer</h2>
+          <p class="about-details">
+            I love building projects from the ground up and bring ideas to life through software.
+          </p>
+          <h3 class="about-languages">Languages I've come in contact with.</h3>
+          <p class="about-details">
+            Java, HTML, CSS, C++.
+          </p>
+          <h3 class="about-languages">Platforms I've worked on.</h3>
+          <p class="about-details">
+            Windows, Android, Web.
+          </p>
+          <h3 class="about-languages">Current position.</h3>
+          <p class="about-details">
+            Currently I am looking for an internship.
+            Believe we might be the right match?
+            Scroll below & get in touch!
+          </p>
+        </div>
       </div>
-    </div>
-    <section class="intro-text" id="intro-text">
-      <div class="intro-text">
-        <!-- Seperates the text section from the arrow. -->
-        <h1>Hi! 👋 &mdash; My name is <span>Jeremy</span>, a <span>developer</span> 🖥️ located in 's-Hertogenbosch,
-          &#8205; <object class="flag" id="flag" data="assets/images/Netherlands.svg" height="27" width="27"></object>
-          <br> and I enjoy creating things from scratch.
-        </h1>
-        <p> I've only recently discovered my interest in development after deciding it was time for a career change.
-          Looking back, I always enjoyed working with computers, however, I never considered it a career option.
-          <br>
-          <br>
-          Learning how to program opened a new world to me in which I can bring ideas to life.
-          I do what I love and love what I do, consequently, learning a lot over the last few years.
-          For now, my goal is to experience all the different languages and platforms out there to broaden my knowledge.
-          <br>
-          <br>
-          Please take a look at my recent projects below, I hope it shows what I'm passionate about!
-        </p>
-      </div>
+      <section class="intro-text" id="intro-text">
+        <div class="intro-text">
+          <!-- Seperates the text section from the arrow. -->
+          <h1>Hi! 👋 &mdash; My name is <span>Jeremy</span>, a <span>developer</span> 🖥️ located in 's-Hertogenbosch,
+            &#8205; <object class="flag" id="flag" data="assets/images/Netherlands.svg" height="27" width="27"></object>
+            <br> and I enjoy creating things from scratch.
+          </h1>
+          <p> I've only recently discovered my interest in development after deciding it was time for a career change.
+            Looking back, I always enjoyed working with computers, however, I never considered it a career option.
+            <br>
+            <br>
+            Learning how to program opened a new world to me in which I can bring ideas to life.
+            I do what I love and love what I do, consequently, learning a lot over the last few years.
+            For now, my goal is to experience all the different languages and platforms out there to broaden my
+            knowledge.
+            <br>
+            <br>
+            Please take a look at my recent projects below, I hope it shows what I'm passionate about!
+          </p>
+        </div>
+      </section>
     </section>
-  </section>
 
-  <div class="divider"><span></span><span>
-      <h1> Projects </h1>
-    </span><span></span></div>
-
+    <div class="divider"><span></span><span>
+        <h1> Projects </h1>
+      </span><span></span></div>
 
 
 
-  <!-- Projects section -->
 
-  <section class="projects" id="projects">
-    <h2 class="projects-title" load="lazy">01.</h2>
-    <div class="projects-container">
-      <div class="project-container project-card">
-        <h1 class="project-title">Kakeibo</h1>
-        <p class="project-details">
-          30-Day Kakeibo was my first mobile Android application. The main focus of the application was to help its
-          users become
-          more aware of their spending habits by enabling them to create a household ledger on their mobile Android
-          devices.
-          <br>
-          <br>
-          The user would register their income and spending habits for 30 days. After these 30 days, they would review
-          their performance, automatically setting a new goal for the next 30-day period.
-          <br>
-          <br>
-          Click on one of the images to the right to view the entire application gallery.
-          <br>
-          <br>
-        </p>
-        <br>
-        <h3> &#x2022; Mobile Android application </h3>
-        <br>
+    <!-- Projects section -->
+
+    <section class="projects" id="projects">
+      <h2 class="projects-title" load="lazy">01.</h2>
+      <div class="gallery">
+        <a href="assets/images/KakeiboMain.png" data-lightbox="KakeiboGallery" data-title="Kakeibo Login Menu"><img
+            src="assets/images/KakeiboMain.png" loading="lazy" class="firstProjectSecond"
+            data-lightbox="KakeiboGallery"></a>
+        <a href="assets/images/KakeiboMenu.png" data-lightbox="KakeiboGallery" data-title="Kakeibo Main Menu"><img
+            src="assets/images/KakeiboMenu.png" loading="lazy" class="firstProject"></a>
+        <a href="assets/images/KakeiboRegister.png" data-lightbox="KakeiboGallery"
+          data-title="Kakeibo Register User"></a>
+        <a href="assets/images/KakeiboWallet.png" data-lightbox="KakeiboGallery" data-title="Kakeibo Create Wallet"></a>
+        <a href="assets/images/KakeiboPurchase.png" data-lightbox="KakeiboGallery"
+          data-title="Kakeibo Register Purchase"></a>
       </div>
-    </div>
-    <div class="gallery">
-      <a href="assets/images/KakeiboMain.png" data-lightbox="KakeiboGallery" data-title="Kakeibo Login Menu"><img src="assets/images/KakeiboMain.png"
-          loading="lazy" class="firstProjectSecond" data-lightbox="KakeiboGallery"></a>
-      <a href="assets/images/KakeiboMenu.png" data-lightbox="KakeiboGallery" data-title="Kakeibo Main Menu"><img src="assets/images/KakeiboMenu.png"
-          loading="lazy" class="firstProject"></a>
-      <a href="assets/images/KakeiboRegister.png" data-lightbox="KakeiboGallery" data-title="Kakeibo Register User"></a>
-      <a href="assets/images/KakeiboWallet.png" data-lightbox="KakeiboGallery" data-title="Kakeibo Create Wallet"></a>
-      <a href="assets/images/KakeiboPurchase.png" data-lightbox="KakeiboGallery" data-title="Kakeibo Register Purchase"></a>
-    </div>
-  </section>
-
-  <div class="divider"><span></span><span>
-      <h1> </h1>
-    </span><span></span></div>
-
-  <!-- Second project -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <section class="projects" id="projects">
-    <h2 class="projects-title" load="lazy">02.</h2>
-    <div class="projects-container">
-      <div class="project-container project-card">
-        <h1 class="project-title">Let's Play!</h1>
-        <p class="project-details">
-          Let's Play has by far been my favourite project up until now.
-          The main goal of the application was to develop software in combination with hardware, that would allow
-          children who suffer from mental disabilities to come in contact with games that required them to be physically
-          active.
-          <br>
-          <br>
-          The application made use of RFID tags to identify and register health workers as well as children allowing
-          them to collect game data and connect it to a person.
-          <br>
-          <br>
-          The game consisted of a quiz in which the button on individual Arduino's would match either a right or wrong
-          answer. Through the use of RF-24 modules, the buttons could be placed up to a 100 meters apart creating the
-          incetive to move.
-          <br>
-          <br>
-          Click on one of the images to the right to view the entire application gallery.
-          <br>
-          <br>
-        </p>
+      <h1 class="project-title">Kakeibo</h1>
+      <div class="project-details">
+        30-Day Kakeibo was my first mobile Android application. The main focus of the application was to help its
+        users become
+        more aware of their spending habits by enabling them to create a household ledger on their mobile Android
+        devices.
         <br>
-        <h3> &#x2022; Windows desktop application </h3>
         <br>
+        The user would register their income and spending habits for 30 days. After these 30 days, they would review
+        their performance, automatically setting a new goal for the next 30-day period.
+        <br>
+        <br>
+        Click on one of the images to the right to view the entire application gallery.
+        <br>
+        <br>
+        <br>
+        <h3 class="project-platform"> &#x2022; Mobile Android application </h3>
+    </div>
+    </section>
+
+    <div class="divider"><span></span><span>
+        <h1> </h1>
+      </span><span></span></div>
+
+    <!-- Second project -->
+
+    <section class="projects" id="projects">
+      <h2 class="projects-title" load="lazy">02.</h2>
+      <div class="gallery">
+        <a href="assets/images/LetsPlayWeb.png" data-lightbox="LetsPlayGallery" data-title="Let's Play Login Menu"><img
+            src="assets/images/LetsPlayWeb.png" loading="lazy" class="second-project"
+            data-lightbox="LetsPlayGallery"></a>
+        <a href="assets/images/LetsPlayWebs.png" data-lightbox="LetsPlayGallery" data-title="Let's Play Data Menu"><img
+            src="assets/images/LetsPlayWebs.png" loading="lazy" class="second-project-second"></a>
+        <a href="assets/images/LetsPlayMainMenu.png" data-lightbox="LetsPlayGallery"
+          data-title="Let's Play Main Menu"></a>
+        <a href="assets/images/LetsPlayGame.png" data-lightbox="LetsPlayGallery" data-title="Let's Play Game"></a>
+        <a href="assets/images/LetsPlayReport.png" data-lightbox="LetsPlayGallery"
+          data-title="Let's Play Report Menu"></a>
+        <a href="assets/images/boxes-min.png" data-lightbox="LetsPlayGallery" data-title="Let's Play Game Boxes"></a>
+        <a href="assets/images/box-min.png" data-lightbox="LetsPlayGallery"
+          data-title="Let's Play Game Boxes Components"></a>
+        <a href="assets/images/scanner-min.png" data-lightbox="LetsPlayGallery"
+          data-title="Let's Play RFID Scanner"></a>
+        <a href="assets/images/scannerin-min.png" data-lightbox="LetsPlayGallery"
+          data-title="Let's Play RFID Scanner Inside"></a>
       </div>
+          <h1 class="project-title">Let's Play!</h1>
+          <div class="project-details">
+            Let's Play has by far been my favourite project up until now.
+            The main goal of the application was to develop software in combination with hardware, that would allow
+            children who suffer from mental disabilities to come in contact with games that required them to be
+            physically
+            active.
+            <br>
+            <br>
+            The application made use of RFID tags to identify and register health workers as well as children allowing
+            them to collect game data and connect it to a person.
+            <br>
+            <br>
+            The game consisted of a quiz in which the button on individual Arduino's would match either a right or wrong
+            answer. Through the use of RF-24 modules, the buttons could be placed up to a 100 meters apart creating the
+            incetive to move.
+            <br>
+            <br>
+            Click on one of the images to the right to view the entire application gallery.
+            <br>
+            <br>
+          <br>
+          <h3 class="project-platform"> &#x2022; Windows desktop application </h3>
+        </div>
+    </section>
+    <!-- Contact section -->
+
+    <header>Don't be a stranger. Get in touch!</header>
+
+    <form action="https://formspree.io/f/mlezkrrg" method="POST" id="form" class="topBefore" name="form">
+
+      <input name="Name" id="name" type="text" placeholder="NAME">
+      <input name="Email" id="email" type="email" placeholder="E-MAIL">
+      <textarea name="Message" for="message" id="message" type="text" placeholder="MESSAGE"></textarea>
+      <input id="submit" type="submit" value="SEND MESSAGE!">
+    </form>
+
+    <script>
+      window.onload = function exampleFunction() {
+        $('#name').val('');
+        $('#email').val('');
+        $('#message').val('');
+      };
+    </script>
+
+    <!-- Socials section -->
+
+    <div class="socials-center">
+      <a href="https://www.linkedin.com/in/jeremy-doeve" target="_blank" class="fa-brands fa-linkedin-in fa-2x"></a>
     </div>
-    <div class="gallery">
-      <a href="assets/images/LetsPlayWeb.png" data-lightbox="LetsPlayGallery" data-title="Let's Play Login Menu"><img src="assets/images/LetsPlayWeb.png"
-          loading="lazy" class="second-project" data-lightbox="LetsPlayGallery"></a>
-          <a href="assets/images/LetsPlayWebs.png" data-lightbox="LetsPlayGallery" data-title="Let's Play Data Menu"><img src="assets/images/LetsPlayWebs.png"
-            loading="lazy" class="second-project-second"></a>
-      <a href="assets/images/LetsPlayMainMenu.png" data-lightbox="LetsPlayGallery" data-title="Let's Play Main Menu"></a>
-      <a href="assets/images/LetsPlayGame.png" data-lightbox="LetsPlayGallery" data-title="Let's Play Game"></a>
-      <a href="assets/images/LetsPlayReport.png" data-lightbox="LetsPlayGallery" data-title="Let's Play Report Menu"></a>
-      <a href="assets/images/boxes-min.png" data-lightbox="LetsPlayGallery" data-title="Let's Play Game Boxes"></a>
-      <a href="assets/images/box-min.png" data-lightbox="LetsPlayGallery" data-title="Let's Play Game Boxes Components"></a>
-      <a href="assets/images/scanner-min.png" data-lightbox="LetsPlayGallery" data-title="Let's Play RFID Scanner"></a>
-      <a href="assets/images/scannerin-min.png" data-lightbox="LetsPlayGallery" data-title="Let's Play RFID Scanner Inside"></a>
-    </div>
-  </section>
-  <!-- Contact section -->
 
-  <header>Don't be a stranger. Get in touch!</header>
+    <!-- Footer -->
 
-  <form action="https://formspree.io/f/mlezkrrg" method="POST" id="form" class="topBefore" name="form">
-      
-        <input name="Name" id="name" type="text" placeholder="NAME">
-        <input name="Email" id="email" type="email" placeholder="E-MAIL">
-        <textarea name="Message" for="message" id="message" type="text" placeholder="MESSAGE"></textarea>
-    <input id="submit" type="submit" value="SEND MESSAGE!">
-  </form>
+    <footer>
+      <p class="text-center">Copyright &copy; Jeremy D.</p>
+    </footer>
 
-  <script>
-   window.onload = function exampleFunction() {
-  $('#name').val('');
-  $('#email').val('');
-  $('#message').val('');
-};
-</script>
-
-  <!-- Socials section -->
-
-  <div class="socials-center">
-    <a href="https://www.linkedin.com/in/jeremy-doeve" target="_blank" class="fa-brands fa-linkedin-in fa-2x"></a>
-    </div>
-  
-  <!-- Footer -->
-
-  <footer>
-    <p class="text-center">Copyright &copy; Jeremy D.</p>
-  </footer>
-  
 
 </body>
 
