@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 
+/* Keyframes for blink option */
+
 @keyframes blink {
   0% {
     opacity: 1;
@@ -28,81 +30,122 @@
   --secondary-color: #4756df;
   --primary-shadow: #8b8eaf;
   --secondary-shadow: #a17a69;
-  --bottom-margin: 0.5rem;
-  --bottom-margin-2: 1rem;
-  --line-height: 1.7rem;
-  --transition: 1.0s;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* CSS Resets */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: 2px solid red; */
-}
-
-ul {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-  color: var(--primary-color);
-}
-
-a:hover {
-  text-decoration: none;
-
 }
 
 body {
   font-family: var(--font-family);
 }
 
+/* social icons no underline */
+
+.fa-brands {
+  text-decoration: none !important;
+}
+
+/* navigation bar css */
+
 nav {
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 1;
+  position: relative;
   display: flex;
   justify-content: space-evenly;
-  padding: 2.0rem 4.5rem;
-  background-color: var(--bg-color);
+  padding: 2.0rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  align-items: center;
   font-size: 18px;
-
 }
 
 nav p {
-  margin: 3px;
-  padding: 0px;
+  padding: 10px;
 }
 
 nav h1 {
-  margin: 5px;
-  padding: 0px;
+  padding: 5px;
 }
 
-
-nav ul {
+.navbar-links ul {
   display: flex;
-  margin-top: 15px;
-  gap: 4.5rem;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
-nav ul li {
-  font-weight: normal;
+.navbar-links ul a {
+  text-decoration: none;
+  color: var(--primary-color);
+  display: block;
+  text-decoration: none;
+  padding: 1.5rem;
 }
 
-.fa {
-  width: 50px;
-  margin-top: 20px;
-  text-align: center;
+.toggle-button {
+  position: absolute;
+  display: none;
+  top: 3.75rem;
+  right: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  align-self: center;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: black;
+
+}
+
+/* responsive design css code for navbar */
+
+@media (max-width: 600px) {
+
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .socials {
+    display: none;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-links li {
+    text-align: center;
+    text-decoration: underline
+  }
+
+  .navbar-links li a {
+    padding: .8rem;
+  }
 }
 
 /* Linkedin */
@@ -112,36 +155,25 @@ nav ul li {
 
 }
 
-.talents p {
+.talents {
+  position: relative;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin-top: 1em;
   margin-left: 1.5em;
   color: black;
-  width: 780px;
-  height: 110px;
   font-size: 78px;
   font-weight: bold;
 
 }
 
-.talents #skillSolving {
-  margin-top: 10px;
-}
-
-.talents #skillCurious {
-  margin-top: 10px;
+.talents p {
+  margin-bottom: 0.1em;
+  width: fit-content;
 }
 
 .typing-container {
   display: flex;
-  justify-content: left;
-  align-items: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  margin-left: 1.5em;
-  color: black;
-  height: 110px;
-  font-size: 78px;
-  font-weight: bold;
+  width: fit-content;
 }
 
 .input-cursor {
@@ -154,31 +186,47 @@ nav ul li {
   animation: blink .6s linear infinite alternate;
 }
 
-.feature-text {
-  margin-top: 1em;
+/* annota module responsive css code */
+
+@media (max-width: 600px) {
+
+  .talents {
+    font-size: 42px;
+    right: 0.3em;
+  }
+
+  .talents p {
+    margin-bottom: 0.3em;
+
+  }
+
+  .typing-container {
+    max-height: 110px;
+  }
 }
+
 
 /* CSS voor de over mij en wat ik leuk vind om te doen */
 
 .about {
   background-color: var(--bg-color);
-  padding: 32px 0;
-  margin-top: 2rem;
+  margin-top: auto;
   display: flex;
 
 
 }
 
 .about-container {
-  display: flex;
-  align-items: left;
-  justify-content: left;
   margin-left: 6.5em;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px var(--primary-shadow);
+  padding: 20px;
+  margin-top: 5%;
+
 }
 
 .about-title {
-  text-align: center;
-  margin-bottom: 1rem;
   margin-top: 1.5rem;
 }
 
@@ -190,21 +238,13 @@ nav ul li {
 
 .about p {
   color: rgb(62, 62, 62);
-  margin-top: 1rem;
+  margin-top: 1em;
 }
 
 .aboutSecond-container {
   text-align: center;
-  width: 21.875rem;
-  padding: 1rem;
-}
+  max-width: 23.875rem;
 
-.about-card {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px var(--primary-shadow);
-  padding: 20px;
-  margin: 10px;
 }
 
 /* connect develop icon */
@@ -225,9 +265,26 @@ nav ul li {
   font-size: 110%;
 }
 
-.socials {
+/* responsive design css about */
 
-  margin-top: 10px;
+@media (max-width: 600px) {
+  .about {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .about-container {
+    margin: 2em;
+
+  }
+
+  .intro-text {
+    text-align: center;
+    min-width: 100%;
+    padding: 3%;
+    margin-left: 0%;
+  }
 }
 
 .divider {
@@ -248,7 +305,7 @@ nav ul li {
 .divider span:first-child,
 .divider span:last-child {
   width: 40%;
-  top: 35px;
+  top: 27px;
   background-size: 100% 2px;
   background-repeat: no-repeat;
 }
@@ -263,74 +320,111 @@ nav ul li {
 
 }
 
+/* projects section */
+
 .projects {
   font-family: 'Nunito', sans-serif;
-  margin-left: 7.5rem;
-  margin-top: -3rem;
   color: rgb(51, 51, 51);
+  width: 100%;
 }
+
 
 .projects h2 {
   font-size: 48px;
   font-weight: 700;
+  margin-left: 7.5rem;
 }
 
 .projects h1 {
   font-size: 72px;
   font-weight: 800;
-  margin-left: 9.5rem;
+  margin-left: 16.5rem;
+  margin-top: 1em;
 }
 
 .project-details {
-  max-width: 45%;
+  max-width: 35%;
   padding-top: 15px;
   font-size: 120%;
-
-}
-
-.galler {
-  display: flex;
-  display: -webkit-flex;
-  justify-content: center;
-  justify-content: flex-start;
+  margin-left: 7.5rem;
 }
 
 .firstProject {
-  max-width: 20%;
-  max-height: 20%;
   float: right;
-  margin-right: 5.5rem;
-  margin-top: -450px;
+  max-width: 20%;
+  margin: 2% 1% 0%;
 }
-
 .firstProjectSecond {
-  max-width: 20%;
-  max-height: 20%;
   float: right;
-  margin-right: 2.5rem;
-  margin-top: -550px;
+  max-width: 20%;
+  margin: -5% 3% 0%;
 }
 
 .second-project {
-  max-width: 60%;
-  max-height: 60%;
   float: right;
-  margin-right: -3.5rem;
-  margin-top: -700px;
+  max-width: 45%;  
+  max-height: 45%;
 }
 
 .second-project-second {
-  max-width: 60%;
-  max-height: 60%;
   float: right;
-  margin-right: 15rem;
-  margin-top: -210px;
+  max-width: 45%;  
+  max-height: 45%;
+
+}
+
+/* responsive design css project section */
+
+@media (max-width: 800px) {
+
+  .projects h1 {
+    font-size: 72px;
+    margin-left: 38%;
+    
+  }
+
+  .projects h2 {
+    text-align: left;
+    padding: 3%;
+    margin-left: 0%;
+  }
+
+  .project-details {
+    text-align: left;
+    min-width: 100%;
+    padding: 3%;
+    margin-left: 0%;
+    
+  }
+
+  .firstProject {
+    max-width: 35%;
+    margin-bottom: 5%;
+  }
+
+  .firstProjectSecond {
+    max-width: 35%;
+    margin-right: 13%;
+  }
+
+  .second-project {
+    max-width: 65%;
+  }
+
+  .second-project-second {
+    max-width: 65%;
+    margin-right: 35%;
+    margin-top: -10%;
+
+  }
 }
 
 
+/* contact section */
+
 header {
   position: relative;
-  margin: 500px 0 25px 0;
+  margin: 200px 0 25px 0;
   font-size: 2.5rem;
   text-align: center;
   letter-spacing: 7px;
@@ -401,6 +495,8 @@ textarea:hover {
 #submit:hover {
   color: #ffffff;
 }
+
+/* footer section */
 
 .text-center {
   text-align: center;
